@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norsebold-webfont.woff2') format('woff2'),
+        url('fonts/norsebold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'norseregular';
+    src: url('fonts/norse-webfont.woff2') format('woff2'),
+        url('fonts/norse-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary: #0d6efd;
+    --light: white;
+    --dark: #21252f;
+    --body: #c7d5e0;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.521);
+}
+
+
+body {
+    font-family: 'norsebold', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+    background-color: #1b2838;
+}
+
+h1,
+.display-4 {
+    color: var(--dark);
+    font-size: 10em;
+}
+
+
+p {
+    font-size: 20px;
+    font-family: 'Verdana', sans-serif;
+
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+nav {
+    background-color: #223246;
+}
+
+.nav-link {
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.navbar .logo {
+    width: 160px;
+}
+
+.hero {
+    background-image: url(img/herosec1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(42, 104, 175, 0.205);
+    z-index: -1;
+}
+
+section {
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+h2 {
+    color: var(--light);
+    font-size: 3em;
+}
+
+h6 {
+    color: var(--light);
+    font-size: 2em;
+}
+
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #09152b86;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.img-container {
+    position: relative;
+    width: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.img-container:hover .overlay {
+    width: 100%;
+    left: 0;
+}
+
+.biodetail {
+    white-space: nowrap;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.bio {
+    font-style: italic;
+}
+
+.col-img {
+    background-image: url(img/code-on-screen.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.st {
+    color: rgba(21, 43, 42, 0.473);
+}
+
+.fa {
+    float: right;
+}
+
+.w-100 {
+    background-color: #2a425c;
+}
+
+video {
+    width: 100%;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .vid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 74, 107, 0.205);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.project video {
+    transition: all 0.4s ease;
+}
+
+.project:hover .vid-overlay {
+    opacity: 1;
+}
+
+.project:hover video {
+    transform: scale(1.1)
+}
+
+.pal img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+.bx {
+    font-size: 24px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon a {
+    width: 34px;
+    height: 34px;
+    background-color: #fafafa;
+    border: 2px solid #1294df;
+    border-radius: 2px solid var(--light);
+    color: rgb(56, 150, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.4s ease;
+}
+
+.social-icon a:hover {
+    color: #1294df;
+    background-color: transparent;
+    border-color: #1294df;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #182331;
+    padding: 25px;
+    transition: all 0.36s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5);
+}
+
